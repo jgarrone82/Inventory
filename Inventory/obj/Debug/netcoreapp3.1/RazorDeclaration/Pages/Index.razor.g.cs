@@ -83,6 +83,21 @@ using Inventory.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 27 "C:\Users\jorge.garrone\source\repos\Inventory\Inventory\Pages\Index.razor"
+       
+    private string name = "", color = "", message = "";
+    private int age = 0;
+
+    private void updateMessage(){
+        message = $"We are glad to have you {name}!" + "\n" +
+                  $"You're {age} years old - age is just a number..." + "\n" +
+                  $"And your favorite color in HEX is {color}";
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
