@@ -1,0 +1,41 @@
+﻿<h1>Hello there!</h1>
+
+<h3>Please fill out the following form, to get to know you better.</h3>
+
+<div>
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Insert your Name" @bind-value=@name/>
+        <label>Age:</label>
+        <input type="number" placeholder="Insert your Age" @bind-value=@age/>
+        <label>Favorite Color:</label>
+        <input type="color" placeholder="Insert your Color" @bind-value=@color/>
+        <div>
+            <input type="button" value="Send" @onclick=updateMessage/>
+        </div>
+    </form>
+</div>
+
+<div>
+    <br /><br />
+    <p>@message</p>
+</div>
+
+@code {
+    [Parameter]
+    public string Message { get; set; }
+
+    private string name = "", color = "", message = "";
+    private int age = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = Message;
+    }
+
+    private void updateMessage(){
+        message = $"We are glad to have you {name}!" + "<br /><br />" +
+                  $"You're {age} years old - age is just a number..." + "<br />" +
+                  $"And your favorite color in HEX is {color}";
+    }
+}

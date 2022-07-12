@@ -76,6 +76,13 @@ using Inventory.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 10 "C:\Users\jorge.garrone\source\repos\Inventory\Inventory\_Imports.razor"
+using Inventory.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\jorge.garrone\source\repos\Inventory\Inventory\Pages\FetchData.razor"
 using Inventory.Data;
 
