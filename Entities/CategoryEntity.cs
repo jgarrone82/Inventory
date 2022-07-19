@@ -6,8 +6,8 @@ namespace Entities
 {
     public class CategoryEntity
     {
-        public string CategoryId { get; set; }
-        public string CategoryName { get; set; }
+        public Guid CategoryId { get; set; }
+        public string Name { get; set; }
 
     }
 }
