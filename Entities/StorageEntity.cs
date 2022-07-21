@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entities
 {
     public class StorageEntity
     {
-        //[Key]
-        //[StringLength(50)]
+        [Key]
+        [StringLength(50)]
         public string StorageId { get; set; }
-        //[Required]
+        [Required]
         public DateTime LastUpdate { get; set; }
-        //[Required]
+        [Required]
         public int PartialQuantity { get; set; }
 
         //Relación con produtos (ProductEntity)
