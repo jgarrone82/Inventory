@@ -67,8 +67,7 @@ namespace DataAccess
         {
             if (!options.IsConfigured)
             {
-                //options.UseSqlServer("Server=CELL-200016; Database=InventoryDb;User Id=sa; Password=jOrgE1982;Connection Timeout=30;");
-                //Data Source=CELL-200016;Initial Catalog=taskDb
+                options.UseSqlServer("Server=CELL-200016; Database=InventoryDb;User Id=sa; Password=jOrgE1982;Connection Timeout=30;");                                
             }
         }
 
@@ -77,22 +76,22 @@ namespace DataAccess
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<CategoryEntity>().HasData(
-                new CategoryEntity { CategoryId = "ASH", CategoryName = "Aseo Hogar" },
-                new CategoryEntity { CategoryId = "ASP", CategoryName = "Aseo Personal" },
-                new CategoryEntity { CategoryId = "HGR", CategoryName = "Hogar" },
-                new CategoryEntity { CategoryId = "PRF", CategoryName = "Perfumería" },
-                new CategoryEntity { CategoryId = "SLD", CategoryName = "Salud" },
-                new CategoryEntity { CategoryId = "VDJ", CategoryName = "Video Juegos" }
+                new CategoryEntity { CategoryId = "MPH", CategoryName = "Mobile Phones" },
+                new CategoryEntity { CategoryId = "ELT", CategoryName = "Electronics" },
+                new CategoryEntity { CategoryId = "FUR", CategoryName = "Furniture" },
+                new CategoryEntity { CategoryId = "VDG", CategoryName = "Videogames" },
+                new CategoryEntity { CategoryId = "OFC", CategoryName = "Office" },
+                new CategoryEntity { CategoryId = "PCR", CategoryName = "Personal Care" }
                 );
 
             modelBuilder.Entity<WarehouseEntity>().HasData(
-                new WarehouseEntity { WarehouseId = Guid.NewGuid(), WarehouseName = "Bodega Central", WarehouseAddress = "Calle 8 con 23" },
-                new WarehouseEntity { WarehouseId = Guid.NewGuid(), WarehouseName = "Bodega Norte", WarehouseAddress = "Calle norte con occidente" }
+                new WarehouseEntity { WarehouseId = Guid.NewGuid(), WarehouseName = "Central Warehouse", WarehouseAddress = "4709 Plume Rd NW" },
+                new WarehouseEntity { WarehouseId = Guid.NewGuid(), WarehouseName = "North Warehouse", WarehouseAddress = "425 San Felipe St NW" }
                 );
 
             modelBuilder.Entity<ProductEntity>().HasData(
-                new ProductEntity { ProductId = "ASJ-98745", ProductName = "Crema para manos marca Tersa", ProductDescription = "", CategoryId = "PRF" },
-                new ProductEntity { ProductId = "RPT-5465879", ProductName = "Pastillas para la garganta LESUS", ProductDescription = "", CategoryId = "SLD" }
+                new ProductEntity { ProductId = "MPH-98745", ProductName = "Samsung Galaxy S22 +", ProductDescription = "", CategoryId = "MPH" },
+                new ProductEntity { ProductId = "VDG-54658", ProductName = "Nintendo Switch Neon 64 Gb", ProductDescription = "", CategoryId = "VDG" }
                 );
         }
     }
